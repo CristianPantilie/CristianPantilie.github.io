@@ -1,0 +1,253 @@
+html{
+    font-size: 100%;
+}
+
+.patrat{
+    background-color: blue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 42%;
+    height: 100vh;
+    margin-left: 28%;
+    padding-top: 12em;
+}
+
+.patratel{
+    display: block;
+    text-decoration: none;
+    color: black;
+
+    border-top: 10px;
+    background-color: yellow;
+    flex-basis: 40%;
+    width: 50%;
+    height: 25%;
+
+}
+
+.patratel:hover{
+    background-color: orange;
+}
+
+.patratel p{
+    font-size: 3vw;
+    text-align: center;
+    vertical-align: center;
+}
+
+
+
+h1,h4,h5{
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.albumList {
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 50vw;
+    height: auto;
+
+    margin-top: 10%;
+
+    /*background-color: red;*/
+    /*transition: margin-left 0.5s;*/
+}
+
+
+.album{
+    /*width: 700px;*/
+    /*height: 500px;*/
+    width: 100%;
+    margin-left: 50%;
+    margin-top: 4em;
+    /*transition: margin-left 2s;*/
+}
+
+.albumImage{
+    position: absolute;
+    z-index: 1;
+}
+
+.albumText{
+    font-size: 3vh;
+    position: relative;
+    /*opacity: 0;*/
+}
+
+.albumImage:hover{
+    margin-left: 20%;
+}
+
+.play{
+    display: block;
+    text-decoration: none;
+    width: 8em;
+    height: 5em;
+    background-color: antiquewhite;
+    position: relative;
+    margin-top: 8.5em;
+    margin-left: 5em;
+
+}
+.play p{
+    font-size: 3vw;
+    text-align: center;
+    vertical-align: center;
+}
+
+audio{
+    margin-top: 5%;
+    width: 100%;
+    animation-name: playerAnimation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes playerAnimation {
+    from {
+        width: 100%;
+        margin-top: 5%;
+    }
+    to {
+        width: 20%;
+        margin-top: 40%;
+        margin-left: 40%;
+    }
+}
+
+
+
+.gridContainer{
+    display: grid;
+}
+
+.statsTable{
+    margin-top: 10%;
+    margin-left: 18%;
+    width: 60%;
+}
+
+
+.nothingHere{
+    background-color: black;
+    width: 15em;
+    height: 10em;
+    animation-name: nothingAnimation;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+
+.nothingHere p{
+    color: whitesmoke;
+    font-size: 3em;
+    vertical-align: center;
+    text-align: center;
+}
+
+@keyframes nothingAnimation {
+    0%{
+        margin-left: 0;
+    }
+    25%{
+        margin-top: 0;
+        margin-left: 88%;
+    }
+    50%{
+        margin-left: 88%;
+        margin-top: 38%;
+    }
+    75%{
+        margin-top: 38%;
+        margin-left: 0;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 500px){
+
+    .patrat{
+        width: 65%;
+        margin-left: 19%;
+        height: 50vh;
+        padding-top: 4em;
+    }
+
+
+    .patratel p{
+        font-size: 5vw;
+    }
+
+    .albumImage:hover, .albumImage:active{
+        opacity: 0;
+    }
+
+    .play{
+        margin-top: 8em;
+    }
+
+    @keyframes playerAnimation {
+        from {
+            margin-top: 5%;
+        }
+        to {
+            margin-top: 70%;
+        }
+    }
+
+}
+
+@media only screen and (min-width: 501px) and (max-width: 1200px){
+
+    .patrat{
+        width: 70%;
+        margin-left: 15%;
+        padding-top: 6em;
+        height: 100vh;
+    }
+
+    .patratel p{
+        font-size: 2.5em;
+    }
+
+    .albumImage:hover, .albumImage:active{
+        opacity: 0;
+    }
+
+    .play{
+        margin-top: 2em;
+    }
+
+    @keyframes playerAnimation {
+        from {
+            margin-top: 5%;
+        }
+        to {
+            margin-top: 70%;
+        }
+    }
+}
+
+
+
+
+
+
